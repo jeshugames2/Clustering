@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 dataset= pd.read_json('iris.json')
+dataset= dataset.drop(columns= 'species')
 X= dataset.iloc[:, :-1].values
 
 from sklearn.cluster import KMeans
